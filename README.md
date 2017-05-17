@@ -5,7 +5,7 @@ log4j.logger.kafka.server.KafkaApis=TRACE, requestAppender
 log4j.additivity.kafka.server.KafkaApis=false
 ```
 
-The kafka-requests.log file I included here contains only a subset of the lines from my actual kafka-requests.lof file.
+The kafka-requests.log file I included here contains only a subset of the lines from my actual kafka-requests.log file.
 ```
 $ grep -E 'api_key=(1,|0)' logs/kafka-request.log.2017-05-07-20  > kafka-requests.log
 
