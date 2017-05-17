@@ -1,9 +1,11 @@
-# First, I turned the debuglog levels up to TRACE. Here is what I did in the broker's log4j config file:
+First, I turned the debuglog levels up to TRACE. Here is what I did in the broker's log4j config file:
+`
 log4j.logger.kafka.network.Processor=TRACE, requestAppender
 log4j.logger.kafka.server.KafkaApis=TRACE, requestAppender
 log4j.additivity.kafka.server.KafkaApis=false
-
-# The kafka-requests.log file I included here contains only a subset of the lines from my actual kafka-requests.lof file.
+`
+The kafka-requests.log file I included here contains only a subset of the lines from my actual kafka-requests.lof file.
+```
 $ grep -E 'api_key=(1,|0)' logs/kafka-request.log.2017-05-07-20  > kafka-requests.log
 
 $ python requests.py kafka-requests.log  | sort | uniq
@@ -40,3 +42,5 @@ digraph {
 $ cat requests.in | python to_dot.py > dataflow.dot
 
 $ dot -Tpng dataflow.dot > dataflow.png
+
+```
