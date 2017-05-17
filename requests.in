@@ -1,0 +1,8 @@
+StreamJobA-StreamThread-1-consumer consuming_from topic1
+StreamJobA-StreamThread-1-producer producing_to topic2
+StreamJobAClientId-StreamThread-1-consumer consuming_from topic1
+StreamJobAClientId-StreamThread-1-producer producing_to topic2
+rdkafka consuming_from test
+rdkafka producing_to test
+rdkafka producing_to topic1
+reader consuming_from topic2
